@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 700px;
+  margin: 2em auto 0;
+  display: flex;
+  gap: 5em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal {
+  position: fixed;
+  inset: 0 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(112, 110, 110);
+}
+
+form {
+  padding: 2em;
+  max-width: 300px;
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+  align-items: center;
+}
+
+form div {
+  display: flex;
+  width: 100%;
+  gap: 0.3em;
+  flex-direction: column;
+}
+
+form div input {
+  width: 100%;
+  height: 30px;
+  padding-left: 0.3em;
+  font-family: inherit;
+}
+
+form div input:is(:focus) {
+  outline: none;
+  border: 2px solid rgb(6, 114, 6);
+}
+
+form button {
+  background-color: rgb(6, 114, 6);
+  margin-top: auto;
+  border: none;
+  color: #fff;
+  padding: 0.5em 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.turn {
+  font-size: 2rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  background: #fff;
+}
+
+.board > button {
+  background: inherit;
+  font-size: 2em;
+}
+
+.board > button:first-child {
+  border-left: none;
+  border-top: none;
+}
+
+.board > button:nth-child(2) {
+  border-top: none;
+}
+
+.board > button:nth-child(3) {
+  border-right: none;
+  border-top: none;
+}
+.board > button:nth-child(4) {
+  border-left: none;
+}
+
+.board > button:nth-child(6) {
+  border-right: none;
+}
+
+.board > button:nth-child(7) {
+  border-left: none;
+  border-bottom: none;
+}
+
+.board > button:nth-child(8) {
+  border-bottom: none;
+}
+
+.board > button:nth-child(9) {
+  border-right: none;
+  border-bottom: none;
+}
+
+.button-restart {
+  border: none;
+  background: rgb(6, 114, 6);
+  padding: 1em 3em;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.button-restart:is(:hover, :focus) {
+  transform: scale(1.03);
+}
+
+.hide {
+  display: none;
+}
